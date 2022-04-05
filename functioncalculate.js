@@ -1,28 +1,17 @@
-const command = {add, substract, divide, multiply, remainder}
 
-function cal(a, b){
-    switch(command)
-    return a + b;
-}
-
-switch (command) {
-    case 'add':
-        console.log('go away!');
-        return a + b;
-        break;
-    case 'Chrome':
-        console.log('love you!');
-        return a + b;
-        break;
-    case 'Firefox':
-        console.log('love you!');
-        return a + b;
+function cal(command, a, b){
+    switch(command){
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'divide':
+            return a * b;
+        case 'divide':
+            return a % b;
+        default:    
+            throw Error('unknown command');
     }
-        break;
-    default:
-        console.log('same all!');
-        return a + b;
-}
-        break;
-
 }
