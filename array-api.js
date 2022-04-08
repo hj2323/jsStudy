@@ -62,11 +62,24 @@ const students = [
 }
 // Q8. check if there is a student with the score lower than 50
 {
+    console.clear();
+    const result = students.some((student) => student.score < 50 );
+    console.log(result);
+    
+    const result2 = !students.every((student) => student.score >= 50 );
+    console.log(result2);
     
 }
 // Q9. compute students' average score
 {
-
+    console.clear();
+    const result = students.reduceRight((prev, curr) => {
+        console.log('-----------');
+        console.log(prev);
+        console.log(curr);
+        return prev + curr.score;
+    }, 0);
+    console.log(result);
 }
 
 // Q10. make a string containing all the scores
