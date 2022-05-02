@@ -1,0 +1,3 @@
+# jsStudy
+## 🌟 trying to organize knowledge i learned from any source🌟 
+### 📌 study sources : trailhead, youtube lectures etc...
