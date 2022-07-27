@@ -3,6 +3,10 @@
 //Javascript is synchronous.
 //Execute the code block in order after hoisitng.
 // hoisting : var, function declaration automatically go up to the top
+// 호이스팅: 선언들이 제일 위로 올라가는 것
+
+// setTimeout : web API 브라우저에서 제공되는 Api, 지정한 시간이 지나면 전달한 콜백함수를 호출
+
 console.log('1');
 setTimeout(function() {
     console.log('2');
