@@ -41,6 +41,18 @@ function solution(array, n) {
 }
 
 
+function solution(s1, s2){
+	const intersection = s1.filter((x) => s2.includes(x));
+	return intersection.length;
+}
+
+
 [sort]
 sides = sides.sort((a,b) => a-b)
 return sides[0]+sides[1] > sides[2] ? 1:2;
+
+
+[get median value]
+function solution(array) {
+ return array.sort((a,b) => a-b)[Math.floor( array.length / 2)];	
+}
