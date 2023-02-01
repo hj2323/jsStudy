@@ -148,3 +148,64 @@ function solution(my_string) {
 function solution(my_string) {
 	return my_string.split('').map(n=> n === n.toUpperCase() ? n.toLowerCase() : n.toUpperCase()).join('');
 }	
+
+[암호 해독]
+function solution(cipher, code) {
+    var answer = [];
+    var arr = cipher.split("");
+    for(i=0;i<arr.length;i++){
+        if(i%code === (code-1)){
+            answer.push(arr[i]); 
+        } 
+    }
+
+    return answer.join("");
+}
+
+function solution(cipher, code) {
+	var answer = "";
+	for(let i = code -1; i<cipher.length; i+= code) { //check length of string!!
+		answer += cipher[i];
+	}
+	return answer;
+}
+
+
+[입출력input & output]
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+var output = '*';
+
+rl.on('line', function (line) {
+    input = line.split(' ');
+    input = Number(input[0]);
+}).on('close', function () {
+    for(i=0;i<input;i++)  
+     console.log(output.repeat(i+1));
+});
+
+
+const readline = require('readline');
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+	input = line.split('');
+}).on('close', function () {
+	solution(Number(input[0]));
+});
+
+function solution(n) {
+	for(let i=1; i< n+1; i++){
+		console.log('*'.repeat(i));
+	}
+}
